@@ -1,0 +1,24 @@
+<h1>Site: <%= @site.name %></h1>
+
+<p>STATISTICS AND CHART GO HERE!</p>
+
+<table>
+  <thead>
+    <tr>
+      <td>name</td>
+      <td>page</td>
+      <td>property 1</td>
+      <td>property 2</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.page_url %></td>
+        <td><%= event.property_1 %></td>
+        <td><%= event.property_2 %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
